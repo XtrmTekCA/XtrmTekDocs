@@ -2,17 +2,38 @@
 
 ---
 
-1. [下载并安装本地 PostgreSQL 数据库](https://www.prisma.io/dataguide/postgresql/setting-up-a-local-postgresql-database#overview)
-   创建一个新的数据库， 名称为 `maindbstaging`， 用户名为 `postgres`， 密码为 `admin`
+1. [安装 Docker Compose](https://docs.docker.com/compose/install/)
 2. 确保 .env 文件为如下内容
    ```.env
    DATABASE_URL="postgresql://postgres:admin@localhost:5432/maindbstaging"
    ```
-3. 执行数据库 migration
+3. 通过 docker-compose 安装 PostgreSQL 镜像到本地
+   ```
+   docker-compose up -d
+   ```
+4. 执行 npm install
+   ```
+   npm install
+   ```
+5. 执行数据库 migration
    ```
    prisma migrate dev
    ```
-4. 启动后端服务器
+6. 启动后端服务器
    ```
-   npm start
+   sh run.sh
+   ```
+7. 启动成功
+
+   ```
+   xtrmtek-backend % sh run.sh
+   > xtrmtek-backend@1.0.0 dev
+   > nodemon ./src/index.ts
+
+   [nodemon] 2.0.14
+   [nodemon] to restart at any time, enter `rs`
+   [nodemon] watching path(s): *.*
+   [nodemon] watching extensions: ts,json
+   [nodemon] starting `ts-node ./src/index.ts`
+   Example app listening at http://localhost:4000
    ```
