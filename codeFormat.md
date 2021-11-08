@@ -1,5 +1,7 @@
 # 代码格式规范
 
+---
+
 下载 VSCode 中的 [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 插件来进行自动规范
 
 > **⚠️ 注意<br />
