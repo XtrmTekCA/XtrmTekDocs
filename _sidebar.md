@@ -10,3 +10,4 @@
 - 前端
   - [UI 相关说明](UI.md)
   - [Apple M1](M1.md)
+  - [第三方插件的引用](dependencies.md)
